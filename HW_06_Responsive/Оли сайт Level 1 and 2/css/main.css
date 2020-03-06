@@ -1,0 +1,180 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+	width: 100%;
+}
+img {
+	max-width: 100%;
+}
+.wrapper{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.sidebar {
+	flex-shrink: 0;
+	width: 200px;
+	padding: 10px;
+	background-color:#9cb0c7;
+}
+.left{
+	flex-shrink: 0;
+	width: 200px;
+	padding: 10px;
+	background-color: #c798b8;
+	order: -1;
+}
+
+.logo-picture{
+	width: 140px;
+}
+
+.main-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #ff0;
+	padding: 15px;
+}
+
+#ch~label {
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: grey;
+}
+.bar-list {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.bar-list li {
+	margin: 10px;
+}
+.bar-list a {
+	text-decoration: none;
+	color: #000;
+}
+
+.main{
+	display: flex;
+	width: 100%;
+	flex-grow: 1;
+}
+.content{
+	flex-grow: 1;
+	padding: 20px;
+}
+
+.content-header {
+	display: block;
+	text-align: center;
+	font-size: 1.25em;
+	margin-bottom: 30px;
+}
+
+.card-box{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -10px;
+}
+
+.card{
+	margin: 0 10px 20px;
+	width: calc(33.333% - 20px);
+	padding: 10px 15px 15px;
+	border: 1px solid black;
+	border-radius: 15px;
+	text-align: center;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	background: green;
+}
+
+.card-content {
+	width: 100%;
+}
+
+.btn{
+	text-decoration: none;
+	display: inline-block;
+	padding: 10px 25px;
+	border-radius: 3em;
+	border: 2px solid #f50;
+	color: #fff;
+	background-color: #f90;
+}
+
+.image-box{
+	width: 50%;
+	margin: 0 auto;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 5px solid blue;
+}
+
+.image-box img{
+	vertical-align: top;
+}
+
+.page-footer {
+	padding: 10px 15px;
+	background-color: rgba(0, 255, 0, .5);
+	text-align: center;
+}
+@media (min-width: 768px) {
+	.sidebar {
+		width: 150px;
+	}
+}
+
+@media (min-width: 991px) and (min-width: 900px) {
+	.card {
+		background: #fff;
+	}
+	.sidebar {
+		width: 200px;
+	}
+}
+@media (max-width: 767px) {
+	.bar-list {
+		display: block;
+		background: pink;
+		position: absolute;
+		left: 100%;
+		transform: translateX(0%);
+		transition: transform 0.5s;
+	}
+	#ch:checked ~ .bar-list {
+		transform: translateX(-100%);
+	}
+	.main {
+		/* display: block; */
+		flex-direction: column;
+	}
+	#ch {
+		position: absolute;
+		left: -200vh;
+	}
+	/* #ch~label {
+		position: absolute;
+		opacity: 0.9;
+	} */
+	.sidebar {
+		width: 100%;
+	}
+	.content {
+		order: -1;
+	}
+}

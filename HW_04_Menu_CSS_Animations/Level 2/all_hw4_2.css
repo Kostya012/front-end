@@ -1,0 +1,104 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  background: #0d5825;
+}
+h1 {
+  color: white;
+  font-size: 20px;
+}
+blockquote {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
+blockquote p:first-child::before {
+  content: "“";
+}
+blockquote p:first-child::after {
+  content: "”";
+}
+cite {
+  font-style: italic;
+}
+div {
+  width: 100%;
+  height: 100%;
+}
+div img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+}
+div img:first-child {
+  z-index: 3;
+  margin: -80px 0 0 -20px;
+  transform: rotate(10deg);
+  transition: left 5s 0s ease;
+}
+div img:last-child {
+  z-index: 1;
+  margin: -105px 0 0 -120px;
+  transform: rotate(-20deg);
+  transition: left 5s 0s ease;
+}
+div img:nth-child(2) {
+  z-index: 2;
+  margin: -100px 0 0 -75px;
+  transform: rotate(-10deg);
+  transition: left 5s 0s ease;
+}
+div img:first-child:hover {
+  margin: -110px 0 0 -20px;
+}
+div img:last-child:hover {
+  margin: -135px 0 0 -120px;
+}
+div img:nth-child(2):hover {
+  margin: -130px 0 0 -75px;
+}

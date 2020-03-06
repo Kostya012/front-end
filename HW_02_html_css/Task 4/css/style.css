@@ -1,0 +1,9 @@
+body {
+  width: 800px;
+  height: 600px;
+  background-image: url("../image/lamp.png"), url("../image/grass.png"), url("../image/donut.png"), url("../image/Ёжик.png"), url("../image/house.jpg");
+  background-position: top, 0% 121%, right, left, 50% 50%;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y, no-repeat;
+  background-size: 5%, 25%, 5%, 5%, 40%;
+  background-color: green;
+}

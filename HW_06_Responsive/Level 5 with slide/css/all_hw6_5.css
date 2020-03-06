@@ -1,0 +1,408 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  margin: 0;
+  width: 100%;
+  /* background: white; */
+}
+img {
+  max-width: 100%;
+}
+.logo img {
+  /*если вертикал не прописывать, то 4px снизу добавляет отступ от картинки, так как картинка как текст прописана, не блочная, если сделать картинку блочной, то 4px уберутся*/
+  vertical-align: middle;
+}
+.logo {
+  width: 200px;
+}
+.wrapper{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.sidebar {
+	flex-shrink: 0;
+	width: 100%;
+  padding: 10px;
+  justify-content: center;
+	background-color:#9cb0c7;
+}
+.left {
+	flex-shrink: 0;
+	width: 210px;
+	padding: 10px;
+	background-color: #c798b8;
+	order: -1;
+}
+.main-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #d3b714;
+	padding: 10px;
+}
+#ch~label {
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: grey;
+}
+.bar-list {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 10px;
+}
+.bar-list li {
+	margin: 10px;
+}
+.bar-list a {
+	text-decoration: none;
+	color: #000;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+	width: 100%;
+	flex-grow: 1;
+}
+.content{
+	flex-grow: 1;
+  padding: 20px;
+  order: -1;
+}
+.content-header {
+	display: block;
+	text-align: center;
+	font-size: 1.25em;
+	margin-bottom: 30px;
+}
+.card-box{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -10px;
+}
+.card{
+	margin: 0 10px 20px;
+	width: calc(33.333% - 20px);
+	padding: 10px 10px 10px;
+	border: 2px solid #b0b0b0;
+	border-radius: 15px;
+	text-align: center;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	background: white;
+}
+.card-content {
+	width: 100%;
+}
+.btn{
+	text-decoration: none;
+  display: inline-block;
+  margin: 10px 0 0;
+	padding: 5px 15px;
+	border-radius: 3em;
+	/* border: 2px solid #f50; */
+	color: #fff;
+	background-color: #685174;
+}
+.image-box{
+	width: 50%;
+	margin: 0 auto;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.image-box img{
+	vertical-align: top;
+}
+.page-footer {
+	padding: 10px 10px;
+	background-color: rgba(0, 255, 0, .5);
+	text-align: center;
+}
+p {
+  display: block;
+  width: 100%;
+  text-align: center;
+  word-wrap: break-word; /* Перенос слов */
+  /* word-break: break-all;перенос текста без пробела или с пробелом в любом случаи (не красиво)*/
+}
+h2, h3 {
+  font-weight: bold;
+  margin: 10px 0;
+}
+h2 {
+  display: block;
+  width: 100%;
+}
+h3 {
+  font-size: 20px;
+  text-align: center;
+}
+#ch {
+  position: absolute;
+  left: -200vh;
+}
+.menu_btn {
+  position: absolute;
+  left: -200vh;
+}
+/* Работа с слайд */
+/* Слайдер */
+.slick-slider{}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+  display: flex;
+}
+/* Слайд */
+.slick-slide{}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+.slick-arrow{}
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+/* Стрелка вправо */
+.slick-arrow.slick-next{}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+/* Точки (булиты) */
+.slick-dots{}
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active{}
+/* Элемент точки */
+.slick-dots li button{}
+.card-box {
+  position: relative;
+}
+.card-box .slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+}
+.card-box .slick-arrow.slick-prev {
+  left: 0;
+}
+
+.card-box .slick-arrow.slick-next {
+  right: 0;
+}
+
+@media (max-width: 1199px) {
+  .sidebar {
+		width: 180px;
+	}
+}
+@media (max-width: 991px) {
+  .card {
+    margin: 0 5px 10px;
+    width: calc(33.333% - 10px);
+  }
+  h2, h3 {
+    margin: 5px 0;
+    font-size: 90%;
+  }
+  p {
+    font-size: 90%;
+  }
+  .content-header {
+    margin-bottom: 10px;
+  }
+  /* .image-box {
+    border: 8px solid #c7b7b7;
+  } */
+}
+
+@media (max-width: 767px) {
+	.bar-list {
+		display: block;
+		background: pink;
+		position: absolute;
+    left: 100%;
+    z-index: 1;
+		transform: translateX(0%);
+		transition: transform 0.5s;
+  }
+  .menu_btn {
+    position: absolute;
+    top: 10px;
+    left: calc(100% - 50px);
+  }
+	#ch:checked ~ .bar-list {
+		transform: translateX(-100%);
+	}
+	.main {
+		/* display: block; */
+		flex-direction: column;
+	}
+	#ch~label {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background: grey;
+    cursor: pointer;
+    align-items: center;
+  }
+    /* добавляем "гамбургер" */
+  .menu_btn > span,
+  .menu_btn > span::before,
+  .menu_btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+  }
+  .menu_btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu_btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  #ch:checked ~ .menu_btn > span {
+    transform: rotate(45deg);
+  }
+  
+  #ch:checked ~ .menu_btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  
+  #ch:checked ~ .menu_btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #ch:checked ~ .menu_btn {
+    visibility: visible;
+  }
+	/* #ch~label {
+		position: absolute;
+		opacity: 0.9;
+	} */
+	.sidebar {
+		width: 100%;
+	}
+	.content {
+		order: -1;
+  }
+  .card {
+    margin: 0 2px 5px;
+    width: calc(33.333% - 5px);
+    padding: 5px 5px 5px;
+  }
+  h2, h3 {
+    margin: 5px 0;
+    font-size: 80%;
+  }
+  p {
+    font-size: 80%;
+  }
+  .content-header {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 575px) {
+  .card {
+    margin: 0 0 2px;
+    width: calc(33.333% - 4px);
+    padding: 2px 2px 2px;
+  }
+  h2, h3 {
+    margin: 5px 0;
+    font-size: 70%;
+  }
+  p {
+    font-size: 70%;
+  }
+  .content-header {
+    margin-bottom: 2px;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .card {
+    margin: 0 0 2px;
+    width: calc(49.9% - 4px);
+    padding: 2px 2px 2px;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .card {
+    margin: 0 0 2px;
+    width: calc(99.9% - 4px);
+    padding: 2px 2px 2px;
+  }
+}

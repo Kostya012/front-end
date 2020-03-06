@@ -1,0 +1,164 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+* {
+  box-sizing: content-box;
+}
+*::after {
+  box-sizing: content-box;
+}
+*::before {
+  box-sizing: content-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background: #ccc;
+}
+img {
+  margin: 0 20px 0 0;
+  width: 30px;
+  vertical-align: middle;
+  color: white;
+}
+.menu1 {
+  width: 350px;
+  margin: 0;
+  border: 10px;
+  border-style: solid;
+  border-color: #33383e;
+  padding: 0;
+}
+
+.menu1 ul li ul li span {
+  color: gray;
+}
+.friends {
+  padding: 20px;
+  background: #606a76;
+  border: 1px;
+  border-style: outset;
+  color: white;
+}
+.videos {
+  padding: 20px;
+  background: #606a76;
+  border: 1px;
+  border-style: outset;
+  color: white;
+}
+.photos {
+  padding: 20px;
+  background: #38b5e5;
+  border: 1px;
+  border-style: outset;
+  color: white;
+}
+.menu1 span {
+  font-size: 40px;
+  vertical-align: middle;
+  color: white;
+}
+.index {
+  padding: 5px;
+  float: right;
+  border-radius: 50%;
+  border-style: inset;
+  background: #464e59;
+  text-decoration: none;
+  color: white;
+  vertical-align: middle;
+}
+.block {
+  float: left;
+  border-radius: 10px;
+  vertical-align: middle;
+  color: grey;
+ }
+ .block::after {
+  content: ''; 
+  position: absolute; /* Абсолютное позиционирование */
+  left: 20px; bottom: -20px; /* Положение треугольника */
+  border: 10px solid transparent; /* Прозрачные границы */
+  border-top: 10px solid green; /* Добавляем треугольник */
+ }
+.family {
+  padding: 20px;
+  background: white;
+  border: 1px;
+  border-style: outset;
+  color: gray;
+}
+.family span {
+  color: gray;
+}
+.vocation span {
+  color: gray;
+}
+.vocation {
+  padding: 20px;
+  background: white;
+  border: 1px;
+  border-style: outset;
+  color: gray;
+}
+.family .index {
+  background: white;
+  color: grey;
+  border-style: solid;
+  border: 2px;
+  border-color: grey;
+}
+.vocation .index {
+  background: white;
+  color: grey;
+  border-style: solid;
+  border: 4px;
+  border-color: grey;
+}
+.podcasts {
+  padding: 20px;
+  background: #606a76;
+  border: 1px;
+  border-style: outset;
+  color: white;
+}

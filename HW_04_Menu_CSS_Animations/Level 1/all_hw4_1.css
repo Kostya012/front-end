@@ -1,0 +1,112 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background: #ccc;
+}
+.fix-menu {
+  position: fixed;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  background: grey;
+  vertical-align: middle;
+}
+.fix-menu span {
+  display: block;
+  position: fixed;
+  left: -40px;
+  bottom: 50%;
+  font-size: 28px;
+  color: white;
+  transform: rotate(90deg);
+}
+.fix-menu:hover ~ .menu, .menu:hover {
+  left: 0;
+  cursor: pointer;
+}
+.menu a:hover {
+  color: orange;
+  text-shadow: black 0 0 2px;
+}
+.menu:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.menu {
+  display: block;
+  list-style:none;
+  padding: 10px;
+  margin: 0;
+  box-sizing: border-box;
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  left: -250px;
+  background: gray;
+  transition: left 1s 0s ease;
+  z-index: 2;
+}
+.menu div {
+  width: 13px;
+  height: 13px;
+  margin: 10px 10px 0 0;
+  border: 4px;
+  border-style: solid;
+  background: orange;
+  transform: rotate(45deg);
+  float: left;
+}
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+}
+ul li {
+  margin: 15px 20px 15px;
+}

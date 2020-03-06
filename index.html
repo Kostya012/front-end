@@ -1,0 +1,96 @@
+<!-- Объявление формата/типа документа -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Определяем кодировку символов документа -->
+	<meta charset="utf-8">
+<!-- Устанавливаем параметры отображения страницы на мобильных устройствах -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>A-level</title>
+	<link rel="icon" href="alevel.png" sizes="16x16 32x32" type="image/png">
+	<!--<style type="text/css">
+		a.google-link:link{
+		color: black; 
+		text-decoration: none;
+		font-family:Comic Sans Ms; 
+		font-weight:bold;
+		font-size:14px;
+		}
+		a.google-link:visited {
+		color: black; 
+		text-decoration: none;
+		}
+		a.google-link:hover{
+		color: orange; 
+		text-decoration: underline;
+		}
+	</style>-->
+</head>
+<body>
+<!-- Основная часть документа -->
+	<header><!-- "Шапка" сайта -->
+		<h1>"Homework 1"</h1>
+	</header>
+	<main><!-- Основной контент -->
+		<h2>"Неупорядоченный список. Тег ul"</h2>
+<!--Неупорядоченный список. Тег <ul>-->
+		<ul>
+			<li><h3>пункт списка</h3>(h3)</li>
+			<li><strong>пункт списка</strong>(strong or b)</li>
+			<li><small>пункт списка</small>(small)</li>
+			<li><i>пункт списка</i>(i)</li>
+			<li><sub>пункт списка</sub>(sub)</li>
+		</ul>
+		<h2>"Упорядоченный список. Тег ol"</h2>
+<!--Упорядоченный список. Тег <ol>. С помощью атрибута type можно задавать различные типы маркеров: строчные и заглавные латинские буквы или римские цифры. По умолчанию десятичное число 1,2,3...type="i"-Римское число в нижнем регистре i,ii,iii,iv...type="I"-Римское число в верхнем регистре I,II,III....type="a"-буквы латинского алфавита в нижнем регистре. type="A"-буквы латинского алфавита в верхнем регистре-->
+		<ol type="1">
+			<li>Первый<br>пункт(br)</li> <!--По умолчанию десятичное число 1,2,3...-->
+			<li><hr>Второй пункт(hr)</li>
+			<li><img src="image.png" alt="красивая картинка" width="200"></li>
+			<li>Четвёртый пункт (wbr). Мир фауны появился на Земле гораздо раньше человека, и в нем до сих пор есть много непоз<wbr>нанного, удивительного и чудесного, как на неизведан<wbr>ной планете.</li>
+			<!--<li>Пятый пункт. Введите дату до 1980-01-01:
+				<input type="date" name="bday" max="1979-12-31"><br>
+			</li>-->
+			<li><input type="text" size="40">Пятый пункт(input)</li>
+		</ol>
+<!--Атрибут start меняет стартовое число нумерации пунктов. Может быть отрицательным.-->
+		<ol start="3">
+			<li>раз</li>
+			<li>два</li>
+		</ol>
+<!--Cписок определений. Тег <dl>, <dt>, <dd>.-->
+		<dl>
+			<dt>HTML</dt>
+			<dd>Язык гипертекстовой разметки</dd>
+			<dt>CSS</dt>
+			<dd>Каскадные таблицы стилей</dd>
+			<dd>Язык для оформления HTML-документов</dd>
+		</dl>
+		<h2>"Второй уровень"</h2>
+		<p><a href="#">Белая</a><b> берёза</b><br>
+		<em>Под моим окном</em><br>
+		<em><b>Принакрылась снегом,</b></em><br>
+		<SPAN STYLE="BACKGROUND-COLOR: yellow">Точно серебром.</SPAN></p>
+		<p>Абзац</p>
+		<b>Жирный текст</b>
+		<u>Подчеркнутый текст</u>
+		<i>Курсивный текст</i>
+		<h2>"Третий уровень"</h2>
+		<ol>
+			<li><b>Жирный текст</b></li>
+			<li><i>Курсивный текст</i></li>
+			<li><u>Подчёркнутый текст</u></li>
+			<li><a class="google-link" href="http://www.google.com.ua/" id="mainlink" target="blank" title="Откроется в новой вкладке google.com.ua">google.com.ua</a></li>
+			<li><span style="color: red">Красный цвет</span></li>
+		</ol>
+	</main>
+<!--"Подвал" страницы-->
+	<footer>
+		<p>Автор: Шевцов Константин Олегович</p>
+		<p>Контактная информация: моб.тел. <a href="tel:+380637458050">+38063-745-80-50</a>.<br>
+		электронная почта <a href="mailto:example@gmail.com">example@gmail.com</a>.<br>
+		Skype <a href="skype:someskype?call">someskype</a>.</p>
+	</footer>
+</body>
+</html>
