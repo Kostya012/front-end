@@ -77,3 +77,15 @@ let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 console.log('первый элемент:', numbers[0], 'последний элемент:', numbers[9])
 
 console.log('студент:', student.name, student.surname, ', сейчас активен:', student.isActive)
+
+// Additional task
+
+let yourName = prompt('Введите Ваше имя:', 'Name')
+let yourTwoName = prompt('Введите Вашу фамилию:', 'Two Name')
+let yourAge = prompt('Введите Ваш возраст:', 0)
+//yourName, yourTwoName, yourAge -> all String
+let yourAgePlus = parseInt(yourAge) + 5
+//yourAge -> translate from String to Number
+alert(`Ваше имя: ${yourName}, Ваша фамилия: ${yourTwoName}, Ваш возраст: ${yourAgePlus}`)
+
+//console.log(typeof yourAge, typeof yourAgePlus) String Number
