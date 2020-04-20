@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--<link media="all" rel="stylesheet" href="all_07.css">-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+  <script>
+    const socket = io("http://socketchat.fs.a-level.com.ua")
+  </script>
+  <!-- <script async src="myjs_08.js" type="text/javascript"></script> -->
+  <title>HW_16_JS_DOM</title>
+</head>
+<body>
+  <h1>Calc</h1>
+  <input id="val1" type="number"> + <input id="val2" type="number">
+  <button id="plus" onclick="fPlus()">=</button>
+  <input id="val3" type="number" value="">
+  <p id="result"></p>
+  <div id="root"></div>
+  <div id="root2"></div>
+  <table border="1px">
+    <tbody id="tbl">
+    </tbody>
+  </table>
+  <script>
+    const getStyleSphere = (x, y, mX, mY) => {
+      const distance = ((mX - x)**2 + (mY - y)**2)**0.5
+      console.log(distance)
+      const bg = (distance/10)*255
+      const fg = 255 - bg
+      return {
+        backgroundColor: `rgb(${bg}, ${bg}, ${bg})`,
+        color: `rgb(${fg}, ${fg}, ${fg})`
+      }
+    }
+
+    const getStyleCurrent = (x, y, mX, mY) => {
+      //if (x > mX && y > mY) // это условие подсветить только 1 наведённую ячейку курсором мыши по таблице
+      if (x === mX || y === mY)
+      return {
+        backgroundColor: "red"
+      }
+      return {
+        backgroundColor: ""
+      }
+    }
+
+    //const getStyle = getStyleSphere
+
+    const getStyle = getStyleCurrent
+    for (let i = 0; i < 10; i++) {
+      let tr = document.createElement('tr')
+      for (let j=0; j<10; j++) {
+        let td = document.createElement('td')
+        td.innerText = i * j
+        tr.appendChild(td)
+
+        td.onmouseover = () => {
+          for (let y=0; y<10; y++) {
+            for (let x=0; x<10; x++) {
+              const otherTd = tbl.children[y].children[x]
+              let style = getStyle(x,y,j,i)
+              for (const [styleKey, styleValue] of Object.entries(style)) { //цикл по ключам, можно и for key in
+                otherTd.style[styleKey] = styleValue
+              }
+            }
+          }
+        }
+        td.onmouseout = () => {
+          td.style.cssText = ""
+        }
+      }
+      tbl.appendChild(tr)
+    }
+  </script>
+  <script src="myjs_08.js" type="text/javascript"></script>
+</body>
+</html>
