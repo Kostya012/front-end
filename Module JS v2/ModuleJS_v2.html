@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Устанавливаем параметры отображения страницы на мобильных устройствах -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styleJSModule.css">
+  <title>Module JS</title>
+</head>
+<body>
+  <header><!-- "Шапка" сайта -->
+    <h1>"Task 3"</h1>
+  </header>
+  <main><!-- Основной контент -->
+    <h2>Search on https://www.reddit.com/</h2>
+    <form id="form">
+      <p>Select limit:</p>
+      <select size="1" name="choice", id="limit">
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="25">25</option>
+      </select>
+      <p>Select categories:</p>
+      <select size="1" name="choice", id="category">
+        <option value="angular">angular</option>
+        <option value="reactjs">reactjs</option>
+        <option value="php">php</option>
+        <option value="python">python</option>
+      </select>
+    </form>
+  </main>
+
+  <div id="loader">LOADING from www.reddit.com...
+  </div>
+  <div id="resaultContainer">
+
+  </div>
+  <div id="pagin">
+      <button id="prev" type="button">PREV</button>
+      <button id="next" type="button">NEXT</button>
+  </div>
+  <script src="script_module_v2.js" type="text/javascript"></script>
+</body>
+</html>
